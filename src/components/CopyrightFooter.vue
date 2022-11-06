@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {provide, ref, watch} from "vue";
+import {nextTick, provide, ref, watch} from "vue";
 import CopyrightTextContent from "./CopyrightTextContent.vue";
 
 const props = withDefaults(
@@ -60,6 +60,9 @@ const props = withDefaults(
 );
 
 const showQR = ref(false);
+watch(() => showQR.value, (newShowQr) => {
+  if (!newShowQr) nextTick(() => document.documentElement.scrollTop += 9999);
+});
 
 const isShaking = ref(false);
 watch(() => isShaking.value, (newShakeStatus) => {

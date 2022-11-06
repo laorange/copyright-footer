@@ -1,16 +1,35 @@
 import {defineConfig} from "vite";
 import vue from "@vitejs/plugin-vue";
-import dts from "vite-plugin-dts";
-import * as path from "path";
+import typescript2 from "rollup-plugin-typescript2";
 
 // https://vitejs.dev/config/
 // https://www.youtube.com/watch?v=5QV9wVc8c7g
+// https://www.youtube.com/watch?v=ui717bVHS4I
 export default defineConfig({
+    plugins: [
+        vue(),
+        typescript2({
+            check: false,
+            include: ["src/components/*.vue"],
+            tsconfigOverride: {
+                compilerOptions: {
+                    sourceMap: true,
+                    declaration: true,
+                    declarationMap: true,
+                },
+            },
+            exclude: [
+                "vite.config.ts",
+            ],
+        }),
+    ],
     build: {
+        cssCodeSplit: false,
         lib: {
-            entry: path.resolve(__dirname, "src/index.ts"),
+            entry: "./src/index.ts",
+            formats: ["es", "cjs"],
             name: "CopyrightFooter",
-            fileName: (format) => `copyright-footer.${format}.js`,
+            fileName: (format) => format === "es" ? "index.js" : "index.cjs",
         },
         rollupOptions: {
             external: ["vue"],
@@ -18,11 +37,7 @@ export default defineConfig({
                 globals: {
                     vue: "Vue",
                 },
-                exports: "named",
             },
         },
     },
-    plugins: [vue(), dts({
-        insertTypesEntry: true
-    })],
 });

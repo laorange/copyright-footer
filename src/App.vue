@@ -13,7 +13,7 @@ import packageJson from "../package.json";
   <h1>----- 7 -----</h1>
   <h1>----- 8 -----</h1>
   <h1>----- 9 -----</h1>
-  <CopyrightFooter project-url="https://github.com/laorange" :version="packageJson.version"/>
+  <CopyrightFooter project-url="https://github.com/laorange/copyright-footer" :version="packageJson.version"/>
 </template>
 
 <style scoped>

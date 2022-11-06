@@ -1,6 +1,6 @@
 # 可赞赏的版权页脚
 
-+ 基于vue3+ts+vite+naive-ui
++ 基于 vue3 + ts + vite + naive-ui
 + 带有赞赏码的对话弹窗
 + [示例](https://laorange.github.io/paper-assistant)
 
@@ -19,18 +19,23 @@ yarn add @laorange/copyright-footer
 ## 使用方法
 
 ```typescript
+// main.ts
+
 import copyrightFooter from "@laorange/copyright-footer";
+import "@laorange/copyright-footer/styles.css"
 
 createApp(App)
     .use(copyrightFooter)
     .mount("#app");
 ```
 
-或
+或 
 
 ```typescript
-import {CopyrightFooter} from "@laorange/copyright-footer";
-import "@laorange/copyright-footer/dist/style.css"
+// xxx.vue
+
+import {CopyrightFooter} from "@laorange/copyright-footer"
+import "@laorange/copyright-footer/styles.css"
 ```
 
 ## 参数说明
