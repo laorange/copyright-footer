@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import CopyrightFooter from "./components/CopyrightFooter.vue";
-
+import packageJson from "../package.json";
 </script>
 
 <template>
@@ -13,8 +13,7 @@ import CopyrightFooter from "./components/CopyrightFooter.vue";
   <h1>----- 7 -----</h1>
   <h1>----- 8 -----</h1>
   <h1>----- 9 -----</h1>
-  <h1>----- 1 -----</h1>
-  <CopyrightFooter project-url="https://github.com/laorange" version="0.0.1"/>
+  <CopyrightFooter project-url="https://github.com/laorange" :version="packageJson.version"/>
 </template>
 
 <style scoped>

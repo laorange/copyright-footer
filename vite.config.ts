@@ -10,8 +10,7 @@ export default defineConfig({
         lib: {
             entry: path.resolve(__dirname, "src/index.ts"),
             name: "CopyrightFooter",
-            formats: ["es"],
-            fileName: "copyright-footer",
+            fileName: (format) => `copyright-footer.${format}.js`,
         },
         rollupOptions: {
             external: ["vue"],

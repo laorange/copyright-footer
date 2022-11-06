@@ -2,22 +2,31 @@
 
 + 基于vue3+ts+vite+naive-ui
 + 带有赞赏码的对话弹窗
++ [示例](https://laorange.github.io/paper-assistant)
 
 ## 安装
-
-npm
 
 ```
 npm i @laorange/copyright-footer
 ```
 
-yarn
+或
 
 ```
 yarn add @laorange/copyright-footer
 ```
 
 ## 使用方法
+
+```typescript
+import copyrightFooter from "@laorange/copyright-footer";
+
+createApp(App)
+    .use(copyrightFooter)
+    .mount("#app");
+```
+
+或
 
 ```typescript
 import {CopyrightFooter} from "@laorange/copyright-footer";

@@ -3,8 +3,10 @@ import {App} from "vue";
 
 export {CopyrightFooter};
 
-export default {
-    install: (app: App<Element>): void => {
+const copyrightFooter = {
+    install: (app: App): void => {
         app.component("CopyrightFooter", CopyrightFooter);
     },
 };
+
+export default copyrightFooter;

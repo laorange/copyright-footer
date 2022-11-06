@@ -3,19 +3,20 @@
   "author": "laorange",
   "private": false,
   "license": "AGPL-3.0",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
   "bugs": "https://github.com/laorange/copyright-footer/issues",
   "homepage": "https://github.com/laorange/copyright-footer",
-  "main": "./dist/copyright-footer.js",
-  "module": "./dist/copyright-footer.js",
+  "main": "./dist/copyright-footer.umd.js",
+  "module": "./dist/copyright-footer.es.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/copyright-footer.js",
-      "require": "./dist/copyright-footer.js"
+      "import": "./dist/copyright-footer.es.js",
+      "require": "./dist/copyright-footer.umd.js"
     },
     "./dist/style.css": "./dist/style.css"
   },
