@@ -1,4 +1,4 @@
-import CopyrightFooter from "./components/CopyrightFooter.vue";
+import {CopyrightFooter} from "./components";
 import {App} from "vue";
 
 export {CopyrightFooter};

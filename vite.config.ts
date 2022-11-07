@@ -10,12 +10,12 @@ export default defineConfig({
         vue(),
         typescript2({
             check: false,
-            include: ["src/components/*.vue"],
+            // include: ["src/components/*.vue"],
             tsconfigOverride: {
                 compilerOptions: {
-                    sourceMap: true,
+                    sourceMap: false,
                     declaration: true,
-                    declarationMap: true,
+                    declarationMap: false,
                 },
             },
             exclude: [
@@ -32,7 +32,7 @@ export default defineConfig({
             fileName: (format) => format === "es" ? "index.js" : "index.cjs",
         },
         rollupOptions: {
-            external: ["vue"],
+            external: ["vue", "naive-ui"],
             output: {
                 globals: {
                     vue: "Vue",
