@@ -18,31 +18,14 @@ yarn add @laorange/copyright-footer
 
 ## 使用方法
 
-```typescript
-import CopyrightDiv from "@laorange/copyright-footer/src/components/CopyrightFooter.vue";
-```
+直接复制 `@laorange/copyright-footer/src/components/CopyrightFooter.vue` 的内容。
 
-或
-
-```typescript
-// main.ts
-
-import copyrightFooter from "@laorange/copyright-footer";
-import "@laorange/copyright-footer/styles.css"
-
-createApp(App)
-    .use(copyrightFooter)
-    .mount("#app");
-```
-
-或 
-
-```typescript
-// xxx.vue
-
-import {CopyrightFooter} from "@laorange/copyright-footer"
-import "@laorange/copyright-footer/styles.css"
-```
+> 已尝试过打包，但通过npm再下载后引用时，无法正常使用
+>
+> 参考资料：
+>
+> + https://www.youtube.com/watch?v=5QV9wVc8c7g
+> + https://www.youtube.com/watch?v=ui717bVHS4I
 
 ## 参数说明
 
