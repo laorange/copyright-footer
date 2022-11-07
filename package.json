@@ -3,9 +3,10 @@
   "author": "laorange",
   "private": false,
   "license": "AGPL-3.0",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "files": [
     "dist",
+    "src",
     "index.d.ts"
   ],
   "bugs": "https://github.com/laorange/copyright-footer/issues",

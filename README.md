@@ -19,6 +19,12 @@ yarn add @laorange/copyright-footer
 ## 使用方法
 
 ```typescript
+import CopyrightDiv from "@laorange/copyright-footer/src/components/CopyrightFooter.vue";
+```
+
+或
+
+```typescript
 // main.ts
 
 import copyrightFooter from "@laorange/copyright-footer";
