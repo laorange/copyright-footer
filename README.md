@@ -18,7 +18,7 @@ yarn add @laorange/copyright-footer
 
 ## 使用方法
 
-直接复制 `@laorange/copyright-footer/src/components/CopyrightFooter.vue` 的内容。
+直接复制 `@laorange/copyright-footer/src/components/CopyrightFooter.vue` 和 `.gitattributes` 。
 
 > 已尝试过打包，但通过npm再下载后引用时，无法正常使用
 >
